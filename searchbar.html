@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Love At First Bite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('world-food-day-2020.png');">
+    
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="0317.mp4" type="video/mp4">
+    </video>
+    
+    <div class="relative z-10 bg-white bg-opacity-60 p-8 rounded-lg shadow-lg w-full mx-[10%] text-center">
+        <h1 class="text-3xl font-bold text-black-800 mb-4">Find Your Recipes</h1>
+        
+        <nav class="mb-6">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="searchbar.html" class="text-black-600 relative before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5 before:bg-purple-600 before:transition-all before:duration-300 hover:before:w-full">SearchBar</a></li>
+            </ul>
+        </nav>
+
+        <form id="searchForm" class="flex flex-col space-y-4">
+            <input type="text" id="search" placeholder="Enter Your Ingredients"
+                class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-emerald-400 outline-none">
+            <button type="submit" id="submit"
+                class="bg-emerald-500 text-white py-2 px-4 rounded-lg hover:bg-emerald-600 transition duration-300">
+                Search
+            </button>
+        </form>       
+       
+        <div id="results" class="mt-4 text-gray-700"></div>
+    </div>
+    <script src="script.js"></script>  
+</body>
+</html>

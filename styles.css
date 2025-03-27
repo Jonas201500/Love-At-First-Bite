@@ -1,0 +1,101 @@
+body {
+  background-color: #f88080;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;  
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  font-size: 32px;
+  margin: 0;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+input[type="text"] {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 12px;
+  width: 300px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 20px;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+#results {
+  display: flex;
+  flex-wrap: wrap; /* Wrap to the next line if space runs out */
+  gap: 40px; /* Space between items */
+  justify-content: center; /* Center align items */
+  align-items: flex-start;
+  margin: 40px 0;
+}
+
+#results > div {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Fixed width for each recipe card */
+  flex: 1 1 calc(33.33% - 40px);
+  min-width: 250px; /* Prevents cards from getting too small */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Make sure images are responsive */
+#results img {
+  border-radius: 8px;
+  object-fit: cover;
+  height: 180px;
+  width: 100%;
+}
+
+/* Ensure the button stretches the full width */
+#results a {
+  display: block;
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#results a:hover {
+  background-color: #0056b3;
+}
