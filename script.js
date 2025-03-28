@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.querySelector("#search");
     const resultsList = document.querySelector("#results");
 
-    // Update grid layout to display 2 recipes per row
     resultsList.classList.add("grid", "grid-cols-2", "gap-6", "mt-4", "overflow-y-auto");
     resultsList.style.maxHeight = "70vh";
 
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Adjusted to span both columns for messages
         resultsList.innerHTML = "<p class='col-span-2 text-gray-600 text-lg font-semibold'>Fetching recipes...</p>";
 
         const formattedIngredients = searchValue.replace(/\s+/g, "").split(",").join(",");
@@ -50,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function displayRecipes(recipes) {
-        resultsList.innerHTML = ""; // Clear previous results
+        resultsList.innerHTML = ""; 
 
         for (const recipe of recipes) {
             try {
@@ -69,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         .join("")
                     : "<p>No instructions available.</p>";
 
-                // Extract used and missed ingredients from the initial recipe object
+
                 const usedIngredients = recipe.usedIngredients && recipe.usedIngredients.length > 0
                     ? recipe.usedIngredients.map(ing => ing.original).join(", ")
                     : "None";
